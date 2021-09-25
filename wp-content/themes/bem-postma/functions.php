@@ -182,3 +182,15 @@ function css_to_wp_head() {
     wp_enqueue_style( 'wp_head_style', get_stylesheet_directory_uri() . '/css/style.css', array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'css_to_wp_head' );
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' => 'Изменить контент',
+		'menu_title' => 'Изменить контент',
+		'menu_slug' => 'theme-general-settings',
+		'capability' => 'edit_posts',
+		'redirect' => false
+	));
+	
+	}

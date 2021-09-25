@@ -15,19 +15,19 @@
 			<div class="footer__body">
 				<div class="footer__logo">
 					<a href="https://google.com">
-						<img src="<?php echo get_template_directory_uri();?>/img/footer/footer-logo.svg" alt="">
+						<img src="<?php the_field('footer_logo', 'options'); ?>" alt="">
 					</a>
 				</div>
 				<div class="footer__menu">
 					<a href="https://google.com">
-						<div class="footer__menu-item">Home</div>
+						<div class="footer__menu-item"><?php the_field('footer_menu-item_1', 'options'); ?></div>
 					</a>
 					<a href="https://facebook.com">
-						<div class="footer__menu-item">Facebook</div>
+						<div class="footer__menu-item"><?php the_field('footer_menu-item_2', 'options'); ?></div>
 					</a>
-					<a href="https://ru.linkedin.com/"><div class="footer__menu-item">LinkedIn</div>
+					<a href="https://ru.linkedin.com/"><div class="footer__menu-item"><?php the_field('footer_menu-item_3', 'options'); ?></div>
 					</a>
-					<a href="https://google.com"><div class="footer__menu-item">Contact</div>
+					<a href="https://google.com"><div class="footer__menu-item"><?php the_field('footer_menu-item_4', 'options'); ?></div>
 					</a>
 				</div>
 				<div class="footer__rights">© <?php echo date("Y");?>. All Rights Reserved </div>

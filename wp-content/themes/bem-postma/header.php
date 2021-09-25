@@ -29,21 +29,26 @@
 			<div class="cover__body">
 				<div class="cover__logo">
 					<a href="https://google.com">
-						<img src="<?php echo get_template_directory_uri();?>/img/cover/cover-logo.svg" alt="">
+						<img src="<?php the_field('cover_logo', 'options'); ?>" alt="">
 					</a>
 				</div>
-				<div class="cover__title">Clear, smart, attractive design</div>
-				<div class="cover__description">for your app, logo, website</div>
+				<div class="cover__title"><?php the_field('cover_title', 'options'); ?></div>
+				<div class="cover__description"><?php the_field('cover_description', 'options'); ?></div>
 				<div class="cover__line"></div>
-				<div class="cover__button button">READ MORE</div>
+				<div class="cover__button button"><?php the_field('cover_button', 'options'); ?></div>
 				<div class="cover__arrow-down"></div>
+				<style>
+					.cover__body {
+						background-image: url(<?php the_field('cover_body-bg', 'options'); ?>);
+					}
+				</style>
 			</div>
 		</div>
 		<div class="header">
 			<div class="header__section-menu section-menu">
-				<div class="section-menu__item">HOME</div>
-				<div class="section-menu__item">ABOUT US</div>
-				<div class="section-menu__item">PORTFOLIO</div>
-				<div class="section-menu__item">CONTACT</div>
+				<div class="section-menu__item"><?php the_field('section-menu_item_1', 'options'); ?></div>
+				<div class="section-menu__item"><?php the_field('section-menu_item_2', 'options'); ?></div>
+				<div class="section-menu__item"><?php the_field('section-menu_item_3', 'options'); ?></div>
+				<div class="section-menu__item"><?php the_field('section-menu_item_4', 'options'); ?></div>
 			</div>
 		</div>
